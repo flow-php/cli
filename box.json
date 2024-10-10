@@ -1,0 +1,26 @@
+{
+  "alias": "flow.phar",
+  "banner": false,
+  "blacklist": [
+    ".github",
+    "examples",
+    "docs",
+    "tests",
+    "tools",
+    "var",
+    "fakerphp",
+    "mock-client",
+    "dotenv",
+    "var-exporter"
+  ],
+  "compression": "GZ",
+  "directories": [
+    "src",
+    "vendor"
+  ],
+  "exclude-dev-files": false,
+  "git-version": "git_version",
+  "main": "flow",
+  "metadata": "FlowVersion::getVersion",
+  "output": "./../../build/flow.phar"
+}
