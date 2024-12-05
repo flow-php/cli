@@ -41,5 +41,6 @@
             "Flow\\": "tests/Flow"
         }
     },
-    "prefer-stable": true
+    "minimum-stability": "dev",
+    "prefer-stable": false
 }
