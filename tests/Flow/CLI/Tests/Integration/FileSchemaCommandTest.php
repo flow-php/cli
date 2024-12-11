@@ -149,9 +149,9 @@ OUTPUT,
 | created_at | datetime |    false |             |       [] |
 | updated_at | datetime |    false |             |       [] |
 |   discount |   scalar |     true |      string |       [] |
-|    address |     json |    false |             |       [] |
-|      notes |     json |    false |             |       [] |
-|      items |     json |    false |             |       [] |
+|    address |      map |    false |             |       [] |
+|      notes |     list |    false |             |       [] |
+|      items |     list |    false |             |       [] |
 +------------+----------+----------+-------------+----------+
 7 rows
 
@@ -177,9 +177,9 @@ OUTPUT,
 | created_at | datetime |    false |             |       [] |
 | updated_at | datetime |    false |             |       [] |
 |   discount |   scalar |     true |      string |       [] |
-|    address |     json |    false |             |       [] |
-|      notes |     json |    false |             |       [] |
-|      items |     json |    false |             |       [] |
+|    address |      map |    false |             |       [] |
+|      notes |     list |    false |             |       [] |
+|      items |     list |    false |             |       [] |
 +------------+----------+----------+-------------+----------+
 7 rows
 
