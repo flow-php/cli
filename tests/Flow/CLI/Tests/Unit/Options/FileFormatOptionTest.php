@@ -6,7 +6,7 @@ namespace Flow\CLI\Tests\Unit\Options;
 
 use function Flow\Filesystem\DSL\path;
 use Flow\CLI\Options\{FileFormat, FileFormatOption};
-use Flow\ETL\Adapter\Elasticsearch\Tests\Integration\TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Input\{ArrayInput, InputDefinition, InputOption};
 
 final class FileFormatOptionTest extends TestCase
