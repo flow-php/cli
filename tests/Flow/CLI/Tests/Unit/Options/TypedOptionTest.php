@@ -58,7 +58,7 @@ final class TypedOptionTest extends TestCase
         self::assertSame(10, (new TypedOption('option'))->asInt(new ArrayInput([], $definition), 10));
 
         $this->expectException(InvalidArgumentException::class);
-        self::assertNull((new TypedOption('option'))->asInt(new ArrayInput([], $definition)));
+        (new TypedOption('option'))->asInt(new ArrayInput([], $definition));
     }
 
     public function test_getting_list_of_strings() : void
@@ -88,6 +88,6 @@ final class TypedOptionTest extends TestCase
         self::assertSame('default value', (new TypedOption('option'))->asString(new ArrayInput([], $definition), 'default value'));
 
         $this->expectException(InvalidArgumentException::class);
-        self::assertNull((new TypedOption('option'))->asString(new ArrayInput([], $definition)));
+        (new TypedOption('option'))->asString(new ArrayInput([], $definition));
     }
 }
