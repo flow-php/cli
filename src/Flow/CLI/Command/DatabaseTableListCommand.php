@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Flow\CLI\Command;
 
 use function Flow\CLI\{option_include_file, option_list_of_strings_nullable};
-use Doctrine\DBAL\Tools\DsnParser;
 use Doctrine\DBAL\{Connection, DriverManager};
+use Doctrine\DBAL\Tools\DsnParser;
 use Flow\CLI\Command\Traits\{ConfigOptions, DBOptions};
 use Flow\CLI\Options\{ConfigOption};
 use Flow\ETL\Config;

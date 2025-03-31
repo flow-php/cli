@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Flow\CLI\Tests\Context;
 
+use Doctrine\DBAL\{Connection, DriverManager};
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Tools\DsnParser;
-use Doctrine\DBAL\{Connection, DriverManager};
 
 final readonly class DatabaseContext
 {
