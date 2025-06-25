@@ -39,11 +39,17 @@ function option_int_nullable(string $name, InputInterface $input) : ?int
     return (new TypedOption($name))->asIntNullable($input);
 }
 
+/**
+ * @return array<array-key, string>
+ */
 function option_list_of_strings(string $name, InputInterface $input) : array
 {
     return (new TypedOption($name))->asListOfStrings($input);
 }
 
+/**
+ * @return null|array<array-key, string>
+ */
 function option_list_of_strings_nullable(string $name, InputInterface $input) : ?array
 {
     return (new TypedOption($name))->asListOfStringsNullable($input);
@@ -60,9 +66,11 @@ function argument_string_nullable(string $name, InputInterface $input) : ?string
 }
 
 /**
- * @template ExpextedClass
+ * @template ExpextedClass of object
  *
  * @param class-string<ExpextedClass> $expectedClass
+ *
+ * @return ExpextedClass
  */
 function option_include_file(string $name, InputInterface $input, string $expectedClass) : object
 {
