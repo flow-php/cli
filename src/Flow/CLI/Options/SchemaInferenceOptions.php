@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Flow\CLI\Command\Traits;
+namespace Flow\CLI\Options;
 
-use Flow\ETL\Extractor;
-use Flow\ETL\Extractor\InfersSchema;
+use Flow\ETL\IO\Extractor;
+use Flow\ETL\IO\Extractor\InfersSchema;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -15,9 +15,9 @@ use function Flow\CLI\option_bool;
 use function Flow\CLI\option_int_nullable;
 use function Flow\ETL\DSL\infer_schema;
 
-trait SchemaInferenceOptions
+final readonly class SchemaInferenceOptions
 {
-    private function addSchemaInferenceOptions(Command $command): void
+    public function configure(Command $command): void
     {
         $command
             ->addOption(
@@ -48,7 +48,7 @@ trait SchemaInferenceOptions
             );
     }
 
-    private function applySchemaInference(Extractor $extractor, InputInterface $input, SymfonyStyle $style): bool
+    public function apply(Extractor $extractor, InputInterface $input, SymfonyStyle $style): bool
     {
         if (!$extractor instanceof InfersSchema) {
             return true;

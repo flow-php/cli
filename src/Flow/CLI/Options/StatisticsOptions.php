@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Flow\CLI\Command\Traits;
+namespace Flow\CLI\Options;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 
-trait StatisticsOptions
+final readonly class StatisticsOptions
 {
-    private function addStatisticsOptions(Command $command): void
+    public function configure(Command $command): void
     {
         $command
             ->addOption(
